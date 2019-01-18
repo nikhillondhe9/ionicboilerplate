@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-range min="-100" step="10" snaps="true" [(ngModel)]="text">
+        <ion-label range-left class="small-text">A</ion-label>
+        <ion-label range-right>A</ion-label>
+      </ion-range>
+    </ion-item>
+  <ion-item>
+    <ion-label fixed>Enter name</ion-label>
+    <ion-input type="text" [(ngModel)]="name" value=""></ion-input>
+  </ion-item>
+</ion-list>
+  <button ion-button icon-left (click)="openModal()">
+  <ion-icon name="albums"></ion-icon>
+  Click Me!
+  </button>
+  <ion-card>
+  <img (swipe)="presentActionSheet()" src="assets/imgs/lights.jpg"/>
+  <ion-card-content>
+    <ion-card-title>
+      Aurora Borealis
+      </ion-card-title>
+    <p>
+      The northern lights, or aurora borealis, offer an entrancing, dramatic, magical display that fascinates all who see it
+    </p>
+    <ion-item>
+  <ion-icon name="logo-twitter" item-start></ion-icon>
+  Followers
+  <ion-badge item-end>260k</ion-badge>
+</ion-item>
+  </ion-card-content>
+</ion-card>
+<button>go to canvas image</button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-icon name="logo-facebook" left></ion-icon>
+    <ion-icon name="logo-instagram" left></ion-icon>
+     <ion-icon name="logo-pinterest" left></ion-icon>
+     <ion-icon name="logo-twitter" left></ion-icon>
+     <ion-icon name="logo-youtube" left></ion-icon>
+  </ion-toolbar>
+</ion-footer>
